@@ -1,0 +1,21 @@
+services:
+  project-one-api:
+    image: project-one-api
+    build:
+      context: src/ProjectOne
+      dockerfile: Dockerfile
+      target: prod
+
+  project-two-api:
+    image: project-two-api
+    build:
+      context: src/ProjectTwo
+      dockerfile: Dockerfile
+      target: prod
+
+  project-three-api:
+    image: project-three-api
+    build:
+      context: src/ProjectThree
+      dockerfile: Dockerfile
+      target: prod

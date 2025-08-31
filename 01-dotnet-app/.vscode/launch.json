@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Containers .NET Attach (ProjectOne)",
+            "type": "docker",
+            "request": "attach",
+            "platform": "netCore",
+            "containerName": "project-one-api",
+            // "containerName": "01-dotnet-app-projectone-api-1",
+            "processId": "${command:pickProcess}",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}/src/ProjectOne"
+            }
+        },
+        {
+            "name": "Containers .NET Attach (ProjectTwo)",
+            "type": "docker",
+            "request": "attach",
+            "platform": "netCore",
+            "containerName": "project-two-api",
+            "processId": "${command:pickProcess}",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}/src/ProjectTwo"
+            }
+        },
+        {
+            "name": "Containers .NET Attach (ProjectThree)",
+            "type": "docker",
+            "request": "attach",
+            "platform": "netCore",
+            "containerName": "project-three-api",
+            "processId": "${command:pickProcess}",
+            "sourceFileMap": {
+                "/src": "${workspaceFolder}/src/ProjectThree"
+            }
+        }
+    ]
+}

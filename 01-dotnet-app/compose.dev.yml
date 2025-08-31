@@ -1,0 +1,51 @@
+services:
+  project-one-api:
+    image: project-one-api
+    container_name: project-one-api
+    build:
+      context: src/ProjectOne
+      dockerfile: Dockerfile
+      target: dev
+    init: true
+    volumes:
+      - ./src/ProjectOne:/src
+      - project-one-bin:/src/bin
+      - project-one-obj:/src/obj
+    ports:
+      - "5001:5000"
+
+  project-two-api:
+    image: project-two-api
+    container_name: project-two-api
+    build:
+      context: src/ProjectTwo
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./src/ProjectTwo:/src
+      - project-two-bin:/src/bin
+      - project-two-obj:/src/obj
+    ports:
+      - "5002:5000"
+
+  project-three-api:
+    image: project-three-api
+    container_name: project-three-api
+    build:
+      context: src/ProjectThree
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - ./src/ProjectThree:/src
+      - project-three-bin:/src/bin
+      - project-three-obj:/src/obj
+    ports:
+      - "5003:5000"
+
+volumes:
+  project-one-bin:
+  project-one-obj:
+  project-two-bin:
+  project-two-obj:
+  project-three-bin:
+  project-three-obj:
