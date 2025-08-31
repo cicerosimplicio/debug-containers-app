@@ -10,7 +10,6 @@
             "request": "attach",
             "platform": "netCore",
             "containerName": "project-one-api",
-            // "containerName": "01-dotnet-app-projectone-api-1",
             "processId": "${command:pickProcess}",
             "sourceFileMap": {
                 "/src": "${workspaceFolder}/src/ProjectOne"
